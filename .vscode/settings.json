@@ -1,0 +1,9 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "d:\\Code\\My-Projects\\Chip-8-Emulator\\bin",
+            "binaryPath": "d:\\Code\\My-Projects\\Chip-8-Emulator\\bin\\main",
+            "binaryArgs": []
+        }
+    ]
+}
