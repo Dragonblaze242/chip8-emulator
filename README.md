@@ -2,8 +2,6 @@
 This is a Chip-8 Emulator program coded in C programming language.
 
 
-https://user-images.githubusercontent.com/50235281/216066222-017e812a-a4e9-4546-8968-bbb01adf6115.mp4
-
 
 ### Overview of Chip-8
 - Chip-8 is an interpreter from mid 1970s
