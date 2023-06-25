@@ -3,6 +3,10 @@ This is a Chip-8 Emulator program coded in C programming language.
 
 
 
+https://github.com/8spx/chip8-emulator/assets/135336929/dedff948-0005-45ac-8c73-e0e51e2e8423
+
+
+
 ### Overview of Chip-8
 - Chip-8 is an interpreter from mid 1970s
 - It was designed to make the devolopments of the games easier
