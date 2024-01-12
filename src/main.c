@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdbool.h>
+#ifdef _WIN32
 #include <windows.h>
+#endif
 #include "SDL2/SDL.h"
 #include "chip8.h"
 #include "chip8keyboard.h"
@@ -114,13 +116,17 @@ int main(int argc, char **argv)
 
         if(chip8.registers.delay_timer > 0)
         {
+            #ifdef _WIN32
             Sleep(1);
+            #endif
             chip8.registers.delay_timer -= 1;
         }
 
         if(chip8.registers.sound_timer > 0)
         {
+            #ifdef _WIN32
             Beep(15000, 10 * chip8.registers.sound_timer);
+            #endif
             chip8.registers.sound_timer = 0;
         }
 
