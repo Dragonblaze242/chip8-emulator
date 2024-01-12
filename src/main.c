@@ -2,6 +2,8 @@
 #include <stdbool.h>
 #ifdef _WIN32
 #include <windows.h>
+#else
+#include <unistd.h>
 #endif
 #include "SDL2/SDL.h"
 #include "chip8.h"
@@ -118,6 +120,8 @@ int main(int argc, char **argv)
         {
             #ifdef _WIN32
             Sleep(1);
+            #else
+            sleep(0.001);
             #endif
             chip8.registers.delay_timer -= 1;
         }
