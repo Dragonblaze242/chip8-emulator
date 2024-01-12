@@ -3,13 +3,13 @@ FLAGS = -g
 OBJECTS =./build/chip8memory.o ./build/chip8stack.o ./build/chip8keyboard.o ./build/chip8.o ./build/chip8screen.o
 ifeq ($(OS),Windows_NT)
     CLN = del /q build\*
-	LIB = -lmingw32 -lSDL2main -lSDL2
+	LIB = ./lib -lmingw32 -lSDL2main -lSDL2
 else
 	LIB = -lSDL2main -lSDL2
 	CLN = rm -rf build/*
 endif
 all: ${OBJECTS}
-	gcc ${FLAGS} ${INCLUDES} ./src/main.c ${OBJECTS} -L ./lib ${LIB} -o ./bin/main
+	gcc ${FLAGS} ${INCLUDES} ./src/main.c ${OBJECTS} -L ${LIB} -o ./bin/main
 
 ./build/chip8memory.o:src/chip8memory.c
 	gcc ${FLAGS} ${INCLUDES} ./src/chip8memory.c -c -o ./build/chip8memory.o
