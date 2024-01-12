@@ -1,13 +1,12 @@
-INCLUDES= -I ./include
-FLAGS= -g
-
-OBJECTS=./build/chip8memory.o ./build/chip8stack.o ./build/chip8keyboard.o ./build/chip8.o ./build/chip8screen.o
+INCLUDES = -I ./include
+FLAGS = -g
+OBJECTS =./build/chip8memory.o ./build/chip8stack.o ./build/chip8keyboard.o ./build/chip8.o ./build/chip8screen.o
 ifeq ($(OS),Windows_NT)
-    CLN=del
-	LIB= -lmingw32 -lSDL2main -lSDL2
+    CLN = del /q build\*
+	LIB = -lmingw32 -lSDL2main -lSDL2
 else
-	LIB= -lSDL2main -lSDL2
-	CLN=rm -rf
+	LIB = -lSDL2main -lSDL2
+	CLN = rm -rf build/*
 endif
 all: ${OBJECTS}
 	gcc ${FLAGS} ${INCLUDES} ./src/main.c ${OBJECTS} -L ./lib ${LIB} -o ./bin/main
@@ -27,5 +26,4 @@ all: ${OBJECTS}
 ./build/chip8screen.o:src/chip8screen.c
 	gcc ${FLAGS} ${INCLUDES} ./src/chip8screen.c -c -o ./build/chip8screen.o
 
-clean:
-	${CLN} build\*
+clean: ${CLN} 
