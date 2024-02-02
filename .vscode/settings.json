@@ -4,6 +4,11 @@
       "cwd": "d:\\Code\\My-Projects\\Chip-8-Emulator\\bin",
       "binaryPath": "d:\\Code\\My-Projects\\Chip-8-Emulator\\bin\\main",
       "binaryArgs": []
+    },
+    {
+      "cwd": "c:\\dev\\chip8-emulator\\bin",
+      "binaryPath": "c:\\dev\\chip8-emulator\\bin\\main",
+      "binaryArgs": []
     }
   ],
   "C_Cpp_Runner.cCompilerPath": "gcc",
